@@ -42,7 +42,7 @@ select, button {
     border: 1px solid #444;
     color: #e6e6e6;
     border-radius: 6px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 select {

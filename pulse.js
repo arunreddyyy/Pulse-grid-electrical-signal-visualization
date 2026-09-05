@@ -39,7 +39,7 @@
     function cellCenter(c, r) {
         const offX = (W - (cols - 1) * spacing) / 2;
         const offY = (H - (rows - 1) * spacing) / 2;
-        retuen [off + c * spacing, offY + r * spacing];
+        return [offX + c * spacing, offY + r * spacing];
     }
 
     canvas.addEventListener('click', (e) => {
@@ -67,7 +67,71 @@
         let val = 0;
         for (const p of pulses) {
             const age = now - p.t0;
-            if (age)
+            if (age < 0) continue;
+            const [ox, oy] = cellCenter(p.c, p.r);
+            const dist = Math.hypot(cx - ox, cy - oy);
+            const waveRadius = (age / 1000) * speed;
+            const diff = waveRadius - dist;
+            if ( diff < -20 || diff > 60) continue;
+
+            let intensity;
+            if(diff < 0) {
+                intensity = Math.max(0, 1 + diff / 20);
+            } else {
+                intensity = Math.max(0, 1 - diff / 60);
+            }
+            const fade = Math.max(0, 1 - age / life);
+            intensity *= fade;
+            if ( intensity > val) val = intensity;
+        }
+        return val;
+    }
+
+    function drawBackground() {
+        ctx.fillStyle = theme.bg;
+        ctx.fillRect(0, 0, W, H);
+        if (theme.line) {
+            ctx.strokeStyle = theme.line;
+            ctx.lineWidth = 1;
+            for (let c = 0; c < cols; c++) {
+                const [x] = cellCenter(c, 0);
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+            }
+            for (let r = 0; r < rows; r++){
+                const [, y] = cellCenter(0, r);
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+            }
         }
     }
-})
+
+    function draw(now) {
+        for (let i = pulses.length - 1; i >= 0; i--){
+            if (now - pulses[i].t0 > life + 800) pulses.splice(i, 1);
+        }
+        
+        drawBackground();
+
+        const [pr, pg, pb] = theme.pulse;
+        for( let c = 0; c < cols; c++) {
+            for( let r = 0 ; r < rows; r++) {
+                const [cx, cy] = cellCenter(c,r);
+                const val = getVal(cx ,cy ,now);
+                const radius = 2.4 + val * 3.2;
+
+                if (val < 0.03) {
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, 2, 0, Math.PI * 2);
+                    ctx.fillStyle = theme.dotIdle;
+                    ctx.fill();
+                } else {
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${pr}, ${pg}, ${pb}, ${0.35 + val * 0.65})`;
+                    ctx.fill();
+                }
+            }
+        }
+        requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+})();
