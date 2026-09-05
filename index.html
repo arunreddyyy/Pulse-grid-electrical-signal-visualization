@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pulse Grid</title>
+        <link rel="stylesheet" href="pulse.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="toolbar">
+                <p>Click the grid to send a pulse</p>
+                <div class="controls">
+                    <select id ="bgSelect">
+                        <option value="dark">Dark</option>
+                        <option value="midnight">Midnight</option>
+                        <option value="light">Light</option>
+                        <option value="circuit">Circuit board</option>
+                        <option value="graph">Graph paper</option>
+                    </select>
+                    <button id="clearBtn">Clear</button>
+                </div>
+            </div>
+            <canvas id="grid"></canvas>
+        </div>
+        <script src="pulse.js"></script>
+    </body>
+</html>
