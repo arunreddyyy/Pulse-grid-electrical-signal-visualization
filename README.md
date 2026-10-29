@@ -26,7 +26,7 @@ Run Locally
 
  Clone the repository:
    
-   git clone https://arunreddyyy.github.io/Pulse-grid-electrical-signal-visualization/
+   git clone https://github.com/arunreddyyy/Pulse-grid-electrical-signal-visualization.git
 
 How to Use
 
