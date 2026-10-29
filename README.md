@@ -40,28 +40,14 @@ How to Use
 Project Structure
 
 Pulse-Grid/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-
-Note: Update the filenames above if your project uses different names.
+ index.html
+ style.css
+ script.js
+ README.md
 
 Project Objective
 
 The objective of Pulse Grid is to explore interactive web design and real-time visual effects using fundamental frontend technologies. It demonstrates how HTML, CSS, and JavaScript can be combined to create engaging, responsive digital art without external frameworks.
-
-Future Improvements
-
-- Add more pulse patterns and animation styles.
-- Introduce customizable pulse colors.
-- Add adjustable pulse speed and intensity.
-- Support touch interactions on mobile devices.
-- Include additional grid layouts and visual themes.
-
-License
-
-This project is open for learning, experimentation, and further development. Add a specific open-source license if you intend to distribute it under particular terms.
 
 ---
 
