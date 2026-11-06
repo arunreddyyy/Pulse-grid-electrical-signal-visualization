@@ -6,19 +6,17 @@ Built using HTML, CSS, and JavaScript, this project combines interactive visuals
 
 Features
 
-- Interactive Grid: Click anywhere on the grid to generate visual pulses.
-- Dynamic Pulse Effects: Watch glowing waves spread across the grid.
-- Multiple Themes: Switch between Dark, Midnight, Light, Circuit Board, and Graph Paper themes.
-- Clear Button: Reset the grid and clear the visual effects.
-- Smooth Animations: Enjoy fluid, responsive pulse animations.
-- Minimal UI: A clean interface that focuses on the visual experience.
-- No Installation Required: Runs directly in a web browser.
-
+ Click anywhere on the grid to generate visual pulses.
+ Watch glowing waves spread across the grid.
+ Switch between Dark, Midnight, Light, Circuit Board, and Graph Paper themes.
+ Reset the grid and clear the visual effects.
+ responsive pulse animations.
+ 
 Technologies Used
 
-- HTML5 – Website structure and layout.
-- CSS3 – Styling, themes, glowing effects, and animations.
-- JavaScript – Interactive grid, pulse generation, and theme switching.
+ HTML5 – Website structure and layout.
+ CSS3 – Styling, themes, glowing effects, and animations.
+ JavaScript – Interactive grid, pulse generation, and theme switching.
 
 Getting Started
 
@@ -28,27 +26,15 @@ Run Locally
    
    git clone https://github.com/arunreddyyy/Pulse-grid-electrical-signal-visualization.git
 
-How to Use
+           "OR"
 
-1. Open the website.
-2. Click any point on the grid.
-3. Watch the electrical pulse effect spread.
-4. Change the theme using the theme selector.
-5. Click Clear to reset the visualization.
-6. Experiment with different clicks and themes to create different visual patterns.
+ Run the site using the deployed link given below
 
-Project Structure
-
-Pulse-Grid/
- index.html
- style.css
- script.js
- README.md
+ https://arunreddyyy.github.io/Pulse-grid-electrical-signal-visualization/
 
 Project Objective
 
-The objective of Pulse Grid is to explore interactive web design and real-time visual effects using fundamental frontend technologies. It demonstrates how HTML, CSS, and JavaScript can be combined to create engaging, responsive digital art without external frameworks.
-
----
+Project Objective
+Pulse Grid is just a fun way to experiment with interactive web design and real-time visual effects. It shows how much you can do with  HTML, CSS, and JavaScript without needing any heavy frameworks.
 
 Built with using HTML, CSS, and JavaScript.
