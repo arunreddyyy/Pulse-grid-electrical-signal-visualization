@@ -32,7 +32,9 @@ Run Locally
 
  https://arunreddyyy.github.io/Pulse-grid-electrical-signal-visualization/
 
-Project Objective
+<img width="1366" height="768" alt="Screenshot (161)" src="https://github.com/user-attachments/assets/c8f5ac80-e3f1-47cd-96a5-4d999979ed3c" />
+<img width="1366" height="768" alt="Screenshot (162)" src="https://github.com/user-attachments/assets/633a48de-06dd-45b6-bd10-e8d4de4cac12" />
+
 
 Project Objective
 Pulse Grid is just a fun way to experiment with interactive web design and real-time visual effects. It shows how much you can do with  HTML, CSS, and JavaScript without needing any heavy frameworks.
